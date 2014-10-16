@@ -6,7 +6,7 @@ for($i = 0; $i < count ( $_SESSION ["total"] ); $i ++) {
 	$summary = $summary + $_SESSION ["sum"] [$i] ;
 }
 }
-else { echo "non session";}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,9 +22,9 @@ else { echo "non session";}
 <body>
 <div class="row">
   <div class="col-xs-6 col-md-2"></div>
-  <div class="col-xs-6 col-md-8">
+  <div class="col-xs-6 col-md-8" style ="background-color:#F5ECCE">
   	<div class="row">
-  		<div class="col-xs-12 col-md-12"><br></div>
+  		<div class="col-xs-12 col-md-12"><center><h2>รายการอาหารที่สั่ง</h2></center></div>
   		<div class="col-xs-12 col-md-12">
   		<table class="table">
     <thead>
@@ -35,6 +35,7 @@ else { echo "non session";}
         </tr>
     </thead>
     <?php 
+    if (isset($_SESSION["sum"])){
 		for($i = 0; $i < count ( $_SESSION ["total"] ); $i ++){
 		?>
     <tbody>
@@ -47,11 +48,16 @@ else { echo "non session";}
 		 	</tr>
 		 	<?php } 
 		 	session_destroy();
+		 	
 		 	?>
     </tbody>
 </table>
 
-<h3><?php echo "รวมเป็นเงินทั้งหมด ".$summary;?></h3>
+<h3><?php echo "รวมเป็นเงินทั้งหมด ".$summary." บาท";
+			}else{
+		 		echo "<h3>ไม่มีรายการอาหาร</h3>";
+			}
+		 	?></h3>
 <center>
 	<form action="tomyam.php">
 		<input type="submit" class="btn btn-default" value="สั่งอาหาร" style="width:100px">

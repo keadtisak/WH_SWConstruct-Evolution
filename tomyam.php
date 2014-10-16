@@ -1,5 +1,6 @@
 <?php
  include 'connect.php';
+ $found = iconv('UTF-8','TIS-620//ignore',$found);
  
  ?> 
 
@@ -10,50 +11,87 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> ร้านต้มยำ</title>
+    <title>ร้านก๋วยเตี๋ยวต้มยำบ้านลายจุดข้างวัง</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
   </head>
 <body>
 
 
 <div class="row">
-  <div class="col-md-2"></div>
-  <div class="col-md-8" style = "background-color: #E0F2F7">
+  <div class="col-md-2" ></div>
+  <div class="col-md-8" style ="background-color:#F5ECCE">
   <form class="form_input" method="post" action="calculate.php">
   <div class="row">
-  <div class="col-xs-4 col-sm-12"  > </div>
+  <div class="col-xs-4 col-sm-12"  ><center><h1>ก๋วยเตี๋ยวต้มยำบ้านลายจุดข้างวัง</h1> </center></div>
   <div class="col-xs-4 col-sm-12"  ><h3>รายการที่สั่ง</h3></div>
   <div class="col-xs-4 col-sm-12"  ><h3 >เส้น </h3></div>
    	
    	<div class="col-xs-2 col-sm-3"  > 
          <div class="radio">
   		<label>
-   		 	<input type="radio" name="s"  value="เล้นเล็ก" checked>เล้นเล็ก
+   		 	<input type="radio" name="s"  value="เล้นเล็ก" >เล้นเล็ก
   			</label>
 	</div>   
       </div>
       <div class="col-xs-4 col-sm-3">
        <div class="radio">
   		<label>
-   		 	<input type="radio" name="s" value="เส้นหมี่" checked>เส้นหมี่
+   		 	<input type="radio" name="s" value="เส้นหมี่" >เส้นหมี่
   			</label>
 		</div>
       </div>
       <div class="col-xs-4 col-sm-3">
         <div class="radio">
   		<label>
-   		 	<input type="radio" name="s" value="เส้นบะหมี่" checked>เส้นบะหมี่
+   		 	<input type="radio" name="s" value="เส้นบะหมี่" >เส้นบะหมี่
   			</label>
 	</div>
       </div>
    	 	<div class="col-xs-4 col-sm-3">
         <div class="radio">
   		<label>
-   		 	<input type="radio" name="s"  value="วุ้นเส้น" checked>วุ้นเส้น
+   		 	<input type="radio" name="s"  value="วุ้นเส้น" >วุ้นเส้น
   			</label>
 	</div>
       </div>
+
       <!-- line 2 -->
+      <div class="col-xs-4 col-sm-12"  ><h3 >น้ำซุป</h3></div>
+      <div class="col-xs-2 col-sm-3"  > 
+        <div class="radio">
+  		<label>
+   		 	<input type="radio" name="n"  value="น้ำใส" >น้ำใส
+  			</label>
+	</div>
+      </div>
+      <div class="col-xs-4 col-sm-3">
+        <div class="radio">
+  		<label>
+   		 	<input type="radio" name="n"  value="ต้มยำ" >ต้มยำ
+  			</label>
+	</div>
+      </div>
+
+     <!-- line 3 -->
+       
+      <div class="col-xs-4 col-sm-12"  ><h3 >ความเผ็ด</h3></div>
+      <div class="col-xs-2 col-sm-3"  > 
+        <div class="radio">
+  		<label>
+   		 	<input type="radio" name="r"  value="เผ็ด" >เผ็ด
+  			</label>
+	</div>
+      </div>
+      <div class="col-xs-4 col-sm-3">
+        <div class="radio">
+  		<label>
+   		 	<input type="radio" name="r"  value="ไม่เผ็ด" >ไม่เผ็ด
+  			</label>
+  		</div>
+  		
+  		</div>
+  		
+  		 <!-- line 4 -->
       <div class="col-xs-4 col-sm-12"  ><h3 >เครื่องเพื่มเติม </h3></div>
       <div class="col-xs-2 col-sm-3"  > 
         <div class="radio">
@@ -102,47 +140,19 @@
   		<option value="5">5</option>
 		</select>
       </div>
-
-      <!-- line 3 -->
-      <div class="col-xs-4 col-sm-12"  ><h3 >น้ำซุป</h3></div>
-      <div class="col-xs-2 col-sm-3"  > 
-        <div class="radio">
-  		<label>
-   		 	<input type="radio" name="n"  value="น้ำใส" checked>น้ำใส
-  			</label>
-	</div>
-      </div>
-      <div class="col-xs-4 col-sm-3">
-        <div class="radio">
-  		<label>
-   		 	<input type="radio" name="n"  value="ต้มยำ" checked>ต้มยำ
-  			</label>
-	</div>
-      </div>
-
-     <!-- line 3 -->
-       
-      <div class="col-xs-4 col-sm-12"  ><h3 >ความเผ็ด</h3></div>
-      <div class="col-xs-2 col-sm-3"  > 
-        <div class="radio">
-  		<label>
-   		 	<input type="radio" name="r"  value="เผ็ด" checked>เผ็ด
-  			</label>
-	</div>
-      </div>
-      <div class="col-xs-4 col-sm-3">
-        <div class="radio">
-  		<label>
-   		 	<input type="radio" name="r"  value="ไม่เผ็ด" checked>ไม่เผ็ด
-  			</label>
-  		</div>
   		
-  		</div>
+  		
   		
       </div>
-      <input type="submit" class="btn btn-default" value="ยืนยัน">
-      <input type="reset" class="btn btn-default" value="ล้าง">
-      </form>
+      
+       <div class="col-xs-12 col-sm-12"></div><br>
+       <center><input type="submit" class="btn btn-default" value="ยืนยัน" style="width:100px">
+      <input type="reset" class="btn btn-default" value="ล้าง" style="width:100px">
+      </form><br>
+      <form action="bill.php" >
+      <input type="submit" class="btn btn-default" value="ชำระเงิน" style="width:100px"></form>
+      </center>
+      
       </div>
 	</div>
       
