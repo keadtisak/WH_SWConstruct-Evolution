@@ -19,7 +19,7 @@
 <div class="row">
   <div class="col-md-2"></div>
   <div class="col-md-8" style = "background-color: #E0F2F7">
-  <form class="form_input" method="post" action="calculat.php">
+  <form class="form_input" method="post" action="calculate.php">
   <div class="row">
   <div class="col-xs-4 col-sm-12"  > </div>
   <div class="col-xs-4 col-sm-12"  ><h3>รายการที่สั่ง</h3></div>
