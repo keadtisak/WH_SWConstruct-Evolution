@@ -1,6 +1,9 @@
 <?php
+session_start();
  include 'connect.php';
  $found = iconv('UTF-8','TIS-620//ignore',$found);
+ $r = sizeof($_SESSION["sum"]);
+ 
  
  ?> 
 
@@ -23,7 +26,7 @@
   <form class="form_input" method="post" action="calculate.php">
   <div class="row">
   <div class="col-xs-4 col-sm-12"  ><center><h1>ก๋วยเตี๋ยวต้มยำบ้านลายจุดข้างวัง</h1> </center></div>
-  <div class="col-xs-4 col-sm-12"  ><h3>รายการที่สั่ง</h3></div>
+  <div class="col-xs-4 col-sm-12"  ><h3>รายการสั่งอาหารที่  <?php echo $r+1;?></h3></div>
   <div class="col-xs-4 col-sm-12"  ><h3 >เส้น </h3></div>
    	
    	<div class="col-xs-2 col-sm-3"  > 
@@ -145,15 +148,22 @@
   		
       </div>
       
-       <div class="col-xs-12 col-sm-12"></div><br>
-       <center><input type="submit" class="btn btn-default" value="ยืนยัน" style="width:100px">
+      <div class="col-xs-4 col-sm-12"  ><h3 >อื่นๆ</h3></div>
+       <div class="col-xs-4 col-sm-12">
+       	<textarea class="form-control" name ="comment" rows="3" cols="50" style="width:400px" ></textarea>
+       
+       </div><br>
+       <div class="col-xs-4 col-sm-12"  ><br></div>
+      	<center><input type="submit" class="btn btn-default" value="ยืนยัน" style="width:100px">
       <input type="reset" class="btn btn-default" value="ล้าง" style="width:100px">
+      </center> 
       </form><br>
       <form action="bill.php" >
-      <input type="submit" class="btn btn-default" value="ชำระเงิน" style="width:100px"></form>
-      </center>
+      <center><input type="submit" class="btn btn-default" value="ชำระเงิน" style="width:100px"></center></form>
+      
       
       </div>
+      
 	</div>
       
  		
