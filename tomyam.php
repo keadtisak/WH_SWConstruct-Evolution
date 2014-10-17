@@ -1,13 +1,9 @@
 <?php
 session_start();
  include 'connect.php';
- $found = iconv('UTF-8','TIS-620//ignore',$found);
  $r = sizeof($_SESSION["sum"]);
  
- 
  ?> 
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,12 +17,9 @@ body {
     background-image: url("tomyam.jpg");
 }
 </style>
- 
- 
- 
+
   </head>
 <body>
-
 
 <div class="row">
   <div class="col-md-2"  ></div>
@@ -151,9 +144,6 @@ body {
   		<option value="5">5</option>
 		</select>
       </div>
-  		
-  		
-  		
       </div>
       
       <div class="col-xs-4 col-sm-12"  ><h3 >อื่นๆ</h3></div>
@@ -168,14 +158,9 @@ body {
       </form><br>
       <form action="bill.php" >
       <center><input type="submit" class="btn btn-default" value="ชำระเงิน" style="width:100px"></center></form>
-      
-      
       </div>
-      
 	</div>
-      
- 		
-   	 		 <div class="col-md-2"></div>
+   	 <div class="col-md-2"></div>
 
 </body>
 </html>
