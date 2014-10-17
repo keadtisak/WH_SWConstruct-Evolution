@@ -11,6 +11,8 @@ $va1 = $_REQUEST['count1'];
 $va2 = $_REQUEST['count2'];
 $va3 = $_REQUEST['count3'];
 $a ="เพิ่ม";
+$comment = $_REQUEST['comment'];
+
 if (isset($checks)&&isset($checkn)||isset($checkr)){
 	if(isset($checkp1)&&isset($checkp2)&&isset($checkp3)){
 		if (isset($va1)||isset($va2)||isset($va3)){
@@ -51,11 +53,16 @@ if (isset($checks)&&isset($checkn)||isset($checkr)){
 		$cal = 35;
 	}
 	
-	
+	if (isset ($comment)){
+	$_SESSION["total"][] = $checks.$checkn.$checkr.$disp.$comment;
+	$_SESSION["sum"][] = $cal;
+	header("Location: http://localhost/php_proj/tomyam.php");
+	}else {
 	$_SESSION["total"][] = $checks.$checkn.$checkr.$disp;
 	$_SESSION["sum"][] = $cal;
 	header("Location: http://localhost/php_proj/tomyam.php");
 	//session_destroy();
+	}
 }header("Location: http://localhost/php_proj/tomyam.php");
 ?>
 
