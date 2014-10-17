@@ -163,7 +163,7 @@ body {
        </div><br>
        <div class="col-xs-4 col-sm-12"  ><br></div>
       	<center><input type="submit" class="btn btn-default" value="ยืนยัน" style="width:100px">
-      <input type="reset" class="btn btn-default" value="ล้าง" style="width:100px">
+      <input type="reset" class="btn btn-default" value="เลือกใหม่" style="width:100px">
       </center> 
       </form><br>
       <form action="bill.php" >
