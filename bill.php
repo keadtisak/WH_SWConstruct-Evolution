@@ -17,6 +17,12 @@ for($i = 0; $i < count ( $_SESSION ["total"] ); $i ++) {
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <title>คำนวนผล</title>
     
+     <style>
+body {
+    background-image: url("tomyam.jpg");
+}
+</style>
+ 
 </head>
 
 <body>
