@@ -1,12 +1,10 @@
 <?php
 session_start();
  include 'connect.php';
- $found = iconv('UTF-8','TIS-620//ignore',$found);
  $r = sizeof($_SESSION["sum"]);
  
  
  ?> 
-
 
 <!DOCTYPE html>
 <html>
@@ -21,9 +19,6 @@ body {
     background-image: url("tomyam.jpg");
 }
 </style>
- 
- 
- 
   </head>
 <body>
 

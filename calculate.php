@@ -61,7 +61,6 @@ if (isset($checks)&&isset($checkn)||isset($checkr)){
 	$_SESSION["total"][] = $checks.$checkn.$checkr.$disp;
 	$_SESSION["sum"][] = $cal;
 	header("Location: http://localhost/php_proj/tomyam.php");
-	//session_destroy();
 	}
 }header("Location: http://localhost/php_proj/tomyam.php");
 ?>
