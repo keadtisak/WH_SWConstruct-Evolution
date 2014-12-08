@@ -1,4 +1,5 @@
-<?php // TomyamBranchesV1.0.0
+<?php // TomyamBranchesV1.0.0 
+// ส่วนการทดสอบ
 session_start();
 include_once 'connect.php';
 $checks = $_REQUEST['s'];
