@@ -1,4 +1,4 @@
-<?php
+<?php // สร้าง บิล
 session_start ();
 $summary =0;
 if (isset($_SESSION["sum"])){
